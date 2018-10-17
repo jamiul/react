@@ -7,6 +7,7 @@
     <title>Document</title>
     <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
     <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <link rel="stylesheet" type="text/css" href="./style.css">
     
     <!-- Don't use this in production: -->
     <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
@@ -16,11 +17,23 @@
     <script type="text/babel">
 
       class BbcNews extends React.Component {
+        edit(){
+          alert("Are you want to Edit !!");
+
+        }
+        delete(){
+          alert("Are you sure to Delete !!");
+
+        }
         render(){
           const props = this.props;
           return(
-            <div>
+            <div className="newsCred">
                <h2> {props.children} </h2>
+               <div className="action">
+                <button className="edit" onClick={this.edit}>Edit</button>
+                <button className="delete" onClick={this.delete}>Delete</button>
+                </div>
             </div>
           )
 
@@ -28,9 +41,9 @@
       }  
 
       ReactDOM.render(
-        <div>
-          <BbcNews>Finger strength key to Shakib comeback<BbcNews/>
-          <BbcNews>Portugal prove too strong for Scotland<BbcNews/>
+        <div className="container">
+          <BbcNews>Finger strength key to Shakib comeback</BbcNews>
+          <BbcNews>Portugal prove too strong for Scotland</BbcNews>
         </div>
         ,
         document.getElementById('root')
