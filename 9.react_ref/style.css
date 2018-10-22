@@ -1,0 +1,29 @@
+.container{
+    border: 1px solid green;
+    margin: 0 auto;
+    background-color: cornflowerblue;
+    padding: 50px;
+    margin-left: 1px;
+}
+.newsCred{
+    background-color: lightgray;
+    width: 525px;
+    height: 184px;
+    border: 25px solid greenyellow;
+    /* margin-left: 0px; */
+    /* margin-right: 50px; */
+    padding: 12px;
+}
+button{
+    height: 42px;
+    width: 70px;
+    font-size: 17px;
+}
+.edit{
+    color: green;
+
+}
+.delete{
+    color: red;
+
+}
